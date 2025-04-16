@@ -8,6 +8,7 @@ This folder contains the work developed as contribution to the project and also 
 - Compare and validate models using open datasets (e.g., ADNI, UK Biobank).
 - Contribute to model interpretability and visualization.
 - Integrate clinical and imaging biomarkers.
+- Attempt to integrate omics data into a ML mode/pipeline
 - Document all experiments and findings.
 
 
