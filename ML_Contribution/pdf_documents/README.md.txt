@@ -1,8 +1,15 @@
--- Articles, documents, biomarkers --
-Data Aquisistion and Preprocessing
+### Neurodegenerative Biomarkers & ADNI Methodology
 
-Multi-Modal Neuroimaging Feature Learning for Multi-Class
-Diagnosis of Alzheimer’s Disease
-link - https://pmc.ncbi.nlm.nih.gov/articles/PMC4394860/pdf/nihms675807.pdf
+1. **ADNI Progress Report**  
+   Weiner et al. (2017) *The Alzheimer’s Disease Neuroimaging Initiative: Progress and Future Plans*  
+   [DOI:10.1016/j.jalz.2017.07.754](https://doi.org/10.1016/j.jalz.2017.07.754)  
+   *Essential for understanding ADNI's data structure and biomarker validation*
 
-Rationale: The ADNI dataset consist of neuroimaging data like PET nad MRI. and other demographic and clinical biiomaker data, Our aim is to access the neuroimaging biokers and other clinical data, this article aims to help form intuition about Multi-Modal Neuroimaging datasets and it relevance as preditive featurfes 
+    
+
+2**Feature Selection in AD Prediction**  
+   Jack et al. (2018) *NIA-AA Research Framework: Toward a biological definition of Alzheimer’s disease*  
+   [DOI:10.1016/j.jalz.2018.02.018](https://doi.org/10.1016/j.jalz.2018.02.018)  
+   *Guides prioritization of amyloid/tau/neurodegeneration (A/T/N) biomarkers*
+
+
