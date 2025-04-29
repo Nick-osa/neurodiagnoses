@@ -48,13 +48,3 @@ Develop an **Artificial Neural Network (ANN)** to predict clinical scores of neu
    - APOE4: 2% missing  
    *Action: Forward-fill longitudinal data*
 
-## Preprocessing Pipeline
-```python
-# 1. Clinical data imputation
-df['MMSE'] = df.groupby('DX')['MMSE'].transform(lambda x: x.fillna(x.median())
-
-# 2. Genetic stability
-df['APOE4'] = df.groupby('PTID')['APOE4'].ffill()
-
-# 3. MRI handling
-df['Hippocampus'] = df.groupby('PTID')['Hippocampus'].first()
