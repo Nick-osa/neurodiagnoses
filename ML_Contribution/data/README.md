@@ -1,65 +1,60 @@
 -- For datasets or CSVs used --
 
-Goals
+# Neurodegenerative Disease Prediction with ANNs
 
-Our immediade goals include using Artificial Neural Networks to create a model that cam predict clinical scores of neurodegenerative diseases. This is in tandem with the already deployed RandomForestClassifier model.
-  
-Our dataset would also include genetic information as an improvement to the previouse RandomForestClassifier model.
+## Goals
+Develop an **Artificial Neural Network (ANN)** to predict clinical scores of neurodegenerative diseases, improving upon our existing RandomForestClassifier model by incorporating:
+- Clinical cognitive scores (MMSE, CDRSB)
+- Neuroimaging data (MRI, PET)
+- Fluid biomarkers (CSF, plasma)
+- Genetic risk factors (APOE4)
 
-To acheieve this the data set must:
+## Dataset Strategy
 
-Contain clinical labels (e.g., cognitive scores like MMSE)
+### Primary Dataset: ADNIMERGE
+**Rationale**: Curated Alzheimer's Disease Neuroimaging Initiative (ADNI) data with harmonized variables across phases.
 
-Include neuroimaging data (MRI, PET, fMRI, etc.)
+#### Key Features:
+| Category          | Variables                          |
+|-------------------|-----------------------------------|
+| Clinical          | DX (CN/MCI/AD), MMSE, CDR-SOB     |
+| Demographics      | Age, Sex, Education               |
+| Genetics          | APOE4 genotype                    |
+| MRI               | Hippocampal volume, ICV           |
+| PET               | Amyloid (AV45), FDG-PET           |
+| CSF Biomarkers    | Aβ42, p-Tau, t-Tau                |
 
-Include fluid biomarkers (blood, plasma, CSF)
+### Supplementary Datasets
+- **TADPOLE**: For hyperparameter tuning
+- **OASIS**: Additional imaging validation
 
-Include genetic information (like APOE4, SNPs)
+## Data Availability Report
 
+### Missingness Summary
+1. **Clinical (N=~1,500)**:
+   - `DX`/`MMSE`/`CDRSB`: 30% missing  
+   *Action: Impute using diagnosis-stratified medians*
+   
+2. **MRI (N=~800)**:
+   - Hippocampal volume: 46% missing  
+   *Action: Baseline-carried-forward imputation*
 
-Datasets
-1. ADNI (Alzheimer’s Disease Neuroimaging Initiative)
-Rationale: - ADNI is specifically designed for Alzheimer's diagnosis/progression research
-           - Consists of the ground truth of our proposed ANN model and includes clinical scores like MMSE/CDR.
+3. **PET/CSF (N=~200)**:
+   - Amyloid PET: 81% missing  
+   - CSF Aβ42: 86% missing  
+   *Action: Exclude from initial model*
 
-2. TADPOLE Challenge Dataset
-Rationale  - Augment the ADNI datasets and used for futher model benchmaking and tunning of hyperparametes
+4. **Genetics**:
+   - APOE4: 2% missing  
+   *Action: Forward-fill longitudinal data*
 
-3. OASIS (Open Access Series of Imaging Studies)
-Rationale - Additional Imaging Data
+## Preprocessing Pipeline
+```python
+# 1. Clinical data imputation
+df['MMSE'] = df.groupby('DX')['MMSE'].transform(lambda x: x.fillna(x.median())
 
-CSVs would be dounloaded once access is approved.
+# 2. Genetic stability
+df['APOE4'] = df.groupby('PTID')['APOE4'].ffill()
 
-ADNI.
-
-At first we are going to concentrate on the ADNI dataset specifically the ADNIMERGE dataset.
-ADNIMERGE - The ADNIMERGE dataset is a curated, standardized collection of data from the Alzheimer’s Disease Neuroimaging Initiative (ADNI), designed to facilitate research on Alzheimer’s disease (AD). 
-
-Key Features of ADNIMERGE:
-Data Integration:
-
-Combines clinical, cognitive, MRI, PET, and biomarker data (e.g., CSF Aβ/tau) from ADNI phases (1, GO, 2, 3).
-
-Harmonized variables across different ADNI cohorts for consistency.
-
-Common Variables:
-
-Diagnosis: Labels like CN (Cognitively Normal), MCI (Mild Cognitive Impairment), and AD.
-
-Demographics: Age, sex, education, APOE genotype.
-
-Cognitive Scores: MMSE, ADAS-Cog, CDR-SB.
-
-MRI/PET Biomarkers: Hippocampal volume, amyloid PET (AV45/Florbetapir), FDG-PET.
-
-Format:
-
-Structured as an R data frame (.rda file), widely used in statistical analysis.
-
-Includes longitudinal data (multiple time points per subject).
-
-Purpose:
-
-Simplifies data access for researchers studying AD progression, predictive modeling, or biomarker validation.
-
--- Then we proceed to Pre-process and clean the ADNIMERGE Dataset and clean the dataset.--
+# 3. MRI handling
+df['Hippocampus'] = df.groupby('PTID')['Hippocampus'].first()
