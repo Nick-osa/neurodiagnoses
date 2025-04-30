@@ -27,8 +27,8 @@ Implemet the models in phases based around data availability
 # Workflow
 
 ## Scripts
-- `clean_data.py` - Removes missing values
-- `normalize.py` - Scales numerical features
+- `ADNIMERGE_PREPROCESSING.py` - Examine data for missingness to select features
+- `Visualize_neurodegenerative_biomakers.py` - Visualize how key biomakers affect AD progression and outcomes
 
 ## Usage
 ```bash
