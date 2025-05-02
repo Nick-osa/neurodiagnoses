@@ -30,6 +30,7 @@ Implemet the models in phases based around data availability
 - `ADNIMERGE_PREPROCESSING.py` - Examine data for missingness to select features
 - `Visualize_neurodegenerative_biomakers.py` - Visualize how key biomakers affect AD progression and outcomes
 - `ADNI_baseline_clean_csv.py` - Outputs a clean df with some selected MRI and genetic features for initial ML test model
+-  ADNI_clean_data_exploration - Ouputs visualization that describes class imbalance and feature correlations
 
 
 *ADNI_baseline_clean_csv.py*
@@ -59,6 +60,39 @@ Key Steps:
 Output:
 
 ADNI_baseline_clean.csv: Cleaned and preprocessed baseline data.
+
+
+*ADNI_clean_data_exploration*
+
+ADNI Baseline clean Dataset Exploratory Data Analysis (EDA)
+
+This script performs Exploratory Data Analysis (EDA) on the ADNI baseline clean dataset to inform preprocessing and model selection for machine learning tasks.
+
+## 📋 Purpose
+- Analyze dataset characteristics to identify challenges for model building.
+- Understand distributions of target variable (`DX` diagnosis) and key features.
+- Guide preprocessing steps and model development decisions.
+
+## 🎯 Objectives
+1. **Class Balance Assessment**: Visualize diagnosis distribution (CN, MCI, Dementia).
+2. **Continuous Variable Exploration**: Analyze distributions/outliers in:
+   - Age
+   - Hippocampus_ICV
+   - MMSE (Mini-Mental State Examination)
+   - CDRSB (Clinical Dementia Rating Sum of Boxes)
+3. **Feature Correlation Analysis**: Identify relationships between continuous variables.
+4. **Diagnosis-Feature Relationships**: Visualize feature distributions across diagnoses.
+
+## 📊 Outputs Generated
+| Visualization | Purpose |
+|---------------|---------|
+| `Count Plot` | Diagnosis class distribution |
+| `Histograms` | Feature distributions & outliers |
+| `Correlation Matrix` | Pairwise feature relationships |
+| `Box Plots` | Feature distributions per diagnosis |
+
+NEXT STEPS
+During the model development, Resample the data to achieve a much balanced dataset in Dementia Category
 
 
 
