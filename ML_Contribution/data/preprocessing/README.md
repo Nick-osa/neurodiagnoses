@@ -68,22 +68,22 @@ ADNI Baseline clean Dataset Exploratory Data Analysis (EDA)
 
 This script performs Exploratory Data Analysis (EDA) on the ADNI baseline clean dataset to inform preprocessing and model selection for machine learning tasks.
 
-## 📋 Purpose
+Purpose
 - Analyze dataset characteristics to identify challenges for model building.
 - Understand distributions of target variable (`DX` diagnosis) and key features.
 - Guide preprocessing steps and model development decisions.
 
-## 🎯 Objectives
-1. **Class Balance Assessment**: Visualize diagnosis distribution (CN, MCI, Dementia).
-2. **Continuous Variable Exploration**: Analyze distributions/outliers in:
+Objectives
+1. *Class Balance Assessment**: Visualize diagnosis distribution (CN, MCI, Dementia).
+2. *Continuous Variable Exploration**: Analyze distributions/outliers in:
    - Age
    - Hippocampus_ICV
    - MMSE (Mini-Mental State Examination)
    - CDRSB (Clinical Dementia Rating Sum of Boxes)
-3. **Feature Correlation Analysis**: Identify relationships between continuous variables.
-4. **Diagnosis-Feature Relationships**: Visualize feature distributions across diagnoses.
+3. *Feature Correlation Analysis**: Identify relationships between continuous variables.
+4. *Diagnosis-Feature Relationships**: Visualize feature distributions across diagnoses.
 
-## 📊 Outputs Generated
+ 📊 Outputs Generated
 | Visualization | Purpose |
 |---------------|---------|
 | `Count Plot` | Diagnosis class distribution |
