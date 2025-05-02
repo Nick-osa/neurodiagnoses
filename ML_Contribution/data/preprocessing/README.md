@@ -29,6 +29,31 @@ Implemet the models in phases based around data availability
 ## Scripts
 - `ADNIMERGE_PREPROCESSING.py` - Examine data for missingness to select features
 - `Visualize_neurodegenerative_biomakers.py` - Visualize how key biomakers affect AD progression and outcomes
+- ADNI_baseline_clean_csv.py
+
+*ADNI_baseline_clean_csv.py*
+Data Cleaning for ADNI
+This script prepares a clean subset of the ADNIMERGE dataset (from the Alzheimer's Disease Neuroimaging Initiative) for machine learning tasks. It focuses on extracting baseline data (VISCODE == 'bl') and selecting biologically relevant features including demographics, clinical scores, imaging biomarkers, and genotype data.
+
+Key Steps:
+Selects relevant features: AGE, APOE4, Hippocampus, ICV, MMSE, CDRSB, DX.
+
+Normalizes hippocampal volume using intracranial volume (Hippocampus_ICV).
+
+Stratified median imputation for MMSE and CDRSB by diagnosis (DX).
+
+Encodes missing APOE4 values using the most frequent value per diagnosis group.
+
+Removes rows missing critical features (DX, APOE4, Hippocampus_ICV).
+
+Verifies missing values and retains a clean, analysis-ready dataset.
+
+Exports a final .csv file for downstream ML modeling.
+
+Output:
+ADNI_baseline_clean.csv: Cleaned and preprocessed baseline data.
+
+
 
 ## Usage
 ```bash
