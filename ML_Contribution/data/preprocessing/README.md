@@ -29,7 +29,8 @@ Implemet the models in phases based around data availability
 ## Scripts
 - `ADNIMERGE_PREPROCESSING.py` - Examine data for missingness to select features
 - `Visualize_neurodegenerative_biomakers.py` - Visualize how key biomakers affect AD progression and outcomes
-- ADNI_baseline_clean_csv.py
+- `ADNI_baseline_clean_csv.py` - Outputs a clean df with sime selected MRI and genetic features for initial test ML model
+
 
 *ADNI_baseline_clean_csv.py*
 
