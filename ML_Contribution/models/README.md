@@ -51,22 +51,21 @@ git clone https://github.com/Nick-osa/alzheimer-prediction-ann.git
 cd alzheimer-prediction-ann
 
 ## Usage
-Trained ANN model: models/adni_ann_model.h5
-ANN_model_experiment1.ipynb
+python train_model.py
 
- - Outputs
-   ANN_model_experiment1.ipynb
-   Model: adni_ann_model.h5 (Keras HDF5 format)
-   Scaler: scaler.pkl (Joblib-pickled StandardScaler)
+# Trained ANN model: models/adni_ann_model.h5
+# ANN_model_experiment1.ipynb
 
-  # How to access
+# Outputs: ANN_model_experiment1.ipynb , Model: adni_ann_model.h5 (Keras HDF5 format), Scaler: scaler.pkl (Joblib-pickled StandardScaler)
+
+# How to access
   - python file
  
-  # Load model
+# Load model
   from tensorflow.keras.models import load_model
   loaded_model = load_model("adni_ann_model.h5")
 
-  # Load scaler
+# Load scaler
   import joblib
   loaded_scaler = joblib.load("scaler.pkl")
 
@@ -83,7 +82,7 @@ Sequential(
 
 - Accuracy: 92% (414-sample test set)
 
-Class Performance:
+# Class Performance:
 
 CN (Normal): 0.98 F1-score (157/160 correct)
 
