@@ -43,4 +43,42 @@ Baseline experiment using a shallow Artificial Neural Network (ANN) to classify 
 - **Key drivers** (via SHAP): MMSE, Hippocampal volume
 - Establishes baseline for future experiments with expanded features and model depth
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # 🧠 ANN Model – Experiment 2
+
+Follow-up experiment focused on addressing class imbalance and improving interpretability. SMOTE was applied to improve classification of underrepresented classes (e.g., Dementia), and SHAP was introduced to explain model predictions. A Logistic Regression baseline was added for comparison.
+
+## 🔍 Features Used
+- **Age** (Demographic)
+- **APOE4** status (Genetic risk factor)
+- **MMSE**, **CDRSB** (Clinical scores)
+- **Hippocampus/ICV** (MRI biomarker)
+
+## 🧱 Model Architecture
+- Shallow ANN with 2 hidden layers + dropout
+- Output: 3-class softmax
+- Loss: Categorical crossentropy
+- Optimizer: Adam
+- Compared with Logistic Regression
+
+## ⚖️ Class Imbalance Handling
+- Applied **SMOTE** to oversample Dementia cases
+- Improved recall and precision for minority class, though still room for improvement
+
+## 📊 Results
+- **ANN Accuracy**: ~91%
+- **Logistic Regression**: Comparable accuracy but lower performance in non-linear class boundaries
+- **Key drivers** (via SHAP): CDRSB, MMSE, Hippocampus/ICV
+- **APOE4**: Least impactful feature
+
+## 🧠 Interpretability
+- Applied **SHAP** for feature attribution
+- Validated clinical relevance of top features
+- Helped build trust in model decisions
+
+## 🔄 Next Steps
+- Expand MRI biomarkers (e.g., Cortical Thickness, Ventricular Volume)
+- Test more complex ANN architectures and classical models (e.g., Random Forest)
+- Apply cross-validation for robustness
+
