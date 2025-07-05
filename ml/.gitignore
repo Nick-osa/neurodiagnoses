@@ -1,3 +1,4 @@
+
 # Data
 data/*/raw/
 data/*/interim/
@@ -19,3 +20,11 @@ venv/
 # System
 .DS_Store
 __pycache__/
+
+# Allow placeholder files
+# Allow placeholder files in data directories
+!data/**/raw/README.md
+!data/**/interim/README.md
+!data/**/raw/.gitkeep
+!data/**/interim/.gitkeep
+
