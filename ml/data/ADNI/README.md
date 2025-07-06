@@ -1,6 +1,6 @@
 # ADNI Directory
 
-# Processed ADNI Data (Sample) form ADNIMERGE
+# Processed ADNI Data (Sample) from ADNIMERGE
 
 This folder contains **sample outputs** (first 10 rows) from the processed ADNI baseline dataset used in different machine learning pipelines within this project.
 
