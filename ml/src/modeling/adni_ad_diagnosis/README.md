@@ -93,6 +93,40 @@ Directional Relationships:
 - Class imbalance addressed using **SMOTE** (Experiment 2 & 3)
 
 ---
-
 ## 📂 Folder Structure
+adni_ad/
+├── ANN_ADNI_Experiment1.ipynb
+├── ANN_ADNI_Experiment2.ipynb
+├── ANN_ADNI_Experiment3.ipynb
+├── README.md ← (you are here)
+
+
+# SHAP Directionality Interpretation for Dementia Prediction
+
+This table summarizes the SHAP value directionality for MRI-derived features used in a dementia classification model, and compares them with current Alzheimer's disease (AD) literature.
+
+| Feature              | SHAP Directionality                          | Matches Literature?        | Notes/Interpretation                                                        |
+|----------------------|----------------------------------------------|----------------------------|------------------------------------------------------------------------------|
+| **Hippocampus_bl_ICV** | ↓ volume → ↑ Dementia risk                  | ✅ Strong match             | Hippocampal atrophy is a hallmark of early AD pathology                     |
+| **MidTemp_bl_ICV**     | ↓ volume → ↑ Dementia risk                  | ✅ Strong match             | Middle temporal lobe atrophy is associated with early AD                    |
+| **WholeBrain_bl_ICV**  | ↓ volume → ↑ Dementia risk                  | ✅ Match                    | Global atrophy reflects widespread neurodegeneration                        |
+| **Ventricles_bl_ICV**  | ↑ volume → ↑ Dementia risk                  | ✅ Inverse marker           | Ventricular enlargement indicates surrounding brain atrophy                 |
+| **AGE**                | ↑ age → mild ↑ risk                         | ✅ Weak but consistent      | Age is a strong risk factor, but MRI features dominate in this model        |
+| **Entorhinal_bl_ICV**  | ↓ volume → ↑ Dementia risk                  | ✅ Strong match             | Entorhinal cortex is one of the earliest regions affected in AD             |
+| **APOE4**              | Weak effect; no clear SHAP directionality   | ⚠️ Weak signal in model     | May have stronger effects in longitudinal or larger-scale models            |
+| **Fusiform_bl_ICV**    | ↓ volume → mild ↑ Dementia risk             | ✅ Plausible                | Fusiform atrophy can appear in AD, particularly in later stages            |
+
+---
+
+### Legend
+
+- **↓ volume**: Lower feature value (atrophy)
+- **↑ Dementia risk**: Positive SHAP value (contributes to classifying as dementia)
+- **SHAP Directionality**: Interpreted from SHAP summary plot
+- **Matches Literature?**: Whether the model's interpretation aligns with known AD neuropathology
+
+---
+
+*Interpretation based on SHAP summary plot from multimodal model trained on baseline MRI-derived features.*
+
 
