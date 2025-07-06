@@ -1,1 +1,98 @@
+# ADNI ANN Experiments – Alzheimer's Disease Classification
+
+This folder contains a series of experiments using shallow Artificial Neural Networks (ANNs) to explore the prediction of Alzheimer's Disease (AD) stages using multimodal features from the ADNI dataset. The project is an **exploratory research effort** focused on understanding the predictive power of neuroimaging, genetic, and clinical data — both independently and in combination.
+
+---
+
+## 🔬 Research Motivation
+
+While the Neurodiagnosis project had previously deployed a **Random Forest** model for clinical score prediction (e.g., UPDRS), this ANN-based extension investigates:
+
+- How **clinical scores vs. biological features** affect model performance.
+- Whether **ANNs can capture subtle nonlinearities** in AD pathology.
+- How well **interpretable ML (SHAP)** can validate biological plausibility in digital biomarkers.
+- The influence of **class imbalance** in AD stage classification tasks.
+- What is the directional contribution of some **mri derived feature** e.g hippocampal atrophy to AD pathology?
+
+This framework is not intended for clinical deployment but for improving understanding and transparency in ML-based AD staging.
+
+---
+
+## 🧪 Experiment Summaries
+
+### **🧠 Experiment 1 – Baseline ANN with Clinical Scores**
+
+- **Goal**: Build a minimal shallow ANN using only Hippocampus volume (normalized by ICV) + baseline clinical scores (CDRSB, MMSE) to classify AD into CN, MCI, and Dementia.
+- **Result**: Achieved **92% accuracy**.
+- **Concern**: Potential data leakage due to use of clinically-derived target labels.
+- **Takeaway**: Clinical scores are powerful predictors but may not represent a fair generalization test.
+
+**Classification Report Snippet**:
+precision recall f1-score support
+CN 0.97 0.98 0.98 160
+MCI 0.78 0.90 0.84 68
+AD 0.94 0.88 0.91 186
+
+
+---
+
+### **⚖️ Experiment 2 – Handling Class Imbalance + SHAP**
+
+- **Goal**: Address Dementia class underrepresentation using **SMOTE**, and compare ANN to Logistic Regression.
+- **Steps**:
+  - Applied SMOTE for oversampling
+  - Evaluated ANN vs. Logistic Regression
+  - Introduced **SHAP** for interpretability
+
+- **Findings**:
+  - **ANN achieved ~91% accuracy**, improved Dementia recall.
+  - **SHAP revealed**:
+    - `CDRSB` was most impactful across all stages.
+    - `MMSE` and `Hippocampus_ICV` had high weight in Dementia/MCI.
+    - `APOE4` contributed least (in this feature set).
+
+---
+
+### **🔍 Experiment 3 – MRI & APOE Only vs. +Clinical Scores**
+
+- **Goal**: Compare ANN performance using only **biomarkers (MRI, APOE4)** vs. **adding clinical scores**.
+- **Features**:
+  - Biological: `Hippocampus`, `Entorhinal`, `Ventricles`, `MidTemp`, `WholeBrain` (normalized), `APOE4`, `Age`
+  - Clinical: `MMSE`, `CDRSB`
+
+- **Insights**:
+  - Biological features alone carry predictive power (moderate performance).
+  - Adding `MMSE` and `CDRSB` boosts performance significantly.
+  - SHAP confirmed:
+    - **Low Hippocampus_ICV and WholeBrain_ICV volumes → AD pathology**
+    - Clinical scores dominate feature importance when present.
+
+Directional Relationships:
+---
+| Biomarker          | Directionality | Clinical Significance            |
+|--------------------|----------------|-----------------------------------|
+| Hippocampus_ICV    | ↓ → ↑ AD risk  | Medial temporal lobe atrophy      |
+| WholeBrain_ICV     | ↓ → ↑ AD risk  | Global neurodegeneration          |
+| Ventricles_ICV     | ↑ → ↑ AD risk  | Ex-vacuo ventricular enlargement  |
+| APOE4              | ↑ → ↑ AD risk  | Genetic susceptibility            |
+
+
+
+## 📁 Output
+- Each experiment produces:
+  - Trained model(s)
+  - SHAP plots
+  - Classification reports and confusion matrices
+  - Feature importance insights
+
+---
+
+## 🧬 Notes
+- Dataset used: **ADNI baseline visit**
+- Label classes: `0 = CN`, `1 = MCI`, `2 = AD`
+- Class imbalance addressed using **SMOTE** (Experiment 2 & 3)
+
+---
+
+## 📂 Folder Structure
 
