@@ -21,8 +21,7 @@ Due to ADNI data usage restrictions, only small sample files are included here f
 ## Preprocessing Details
 
 Full preprocessing logic and scripts are located in:
-📁 src/adni/ad_diagnosis_ann/experiments/preprocessing_notebooks/
-📁 src/adni/csf_prediction/experiments/preprocessing_notebooks/
+📁 neurodiagnoses/ml/src/data_processing/ADNI/
 
 ## Disclaimer
 
