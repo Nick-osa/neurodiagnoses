@@ -23,7 +23,7 @@ The complete pipeline was performed in two stages:
 ---
 
 ### 🔹 Stage 1: Raw Data Merging
-**Notebook**: `PPMI_Merge_Notebook.ipynb`
+**Notebook**: `PPMI_Preprocessing_Raw_UPDRS.ipynb`
 
 - Merged multiple PPMI sources:
   - MRI (FreeSurfer volumes, cortical thickness)
@@ -37,7 +37,7 @@ The complete pipeline was performed in two stages:
 ---
 
 ### 🔹 Stage 2: Data Cleaning & Feature Engineering  
-**Notebook**: `PPMI_Preprocessing_2_UPDRS.ipynb`
+**Notebook**: `PPMI_Preprocessing_ready_UPDRS.ipynb`
 
 - Dropped rows and columns with >40% missingness
 - Imputed remaining missing values using **KNN imputation**
@@ -53,7 +53,7 @@ The complete pipeline was performed in two stages:
 ## Preprocessing Code Location
 
 All preprocessing scripts and notebooks are located in:
-
+neurodiagnoses/ml/src/data_processing/PPMI
 
 ## Disclaimer
 
