@@ -130,5 +130,21 @@ SHAP: Lundberg et al. (2017) – "A Unified Approach to Interpreting Model Predi
 Modeling: scikit-learn, XGBoost, SHAP libraries
 
 ---
+### 🧠 3-Axis Diagnostic Mapping
+
+**Axis 1 (Etiology / Risk):**
+- APOE4 genotype
+-
+- Age
+
+**Axis 2 (Molecular Biomarkers):**
+- pTau positivity
+- tTau/Abeta ratio
+- SHAP-important features: e.g., left entorhinal volume, amygdala, etc.
+
+**Axis 3 (Clinical–Anatomical Features):**
+- Hippocampal volume (MRI)
+- MMSE 
+- Cortical thickness metrics
 
 
