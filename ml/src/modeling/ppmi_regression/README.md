@@ -98,7 +98,6 @@ This project develops machine learning models to predict Unified Parkinson's Dis
 - **Visualization**: Matplotlib, Seaborn
 
 ## Future Work
-- Incorporate longitudinal data to predict disease progression.
 - Explore ensemble models for improved performance.
 - Evaluate deep learning with larger, augmented datasets.
 - Perform external validation across centers or cohorts.
