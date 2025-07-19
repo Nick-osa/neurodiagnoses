@@ -32,3 +32,35 @@ This research initiative as part of a Master thesis with Fundació de Neuroscien
 - Predictive modeling of disease progression
 
 ## Project Structure
+├── data/ # Datasets and processed data
+│ ├── ADNI/ # Alzheimer's Disease Neuroimaging Initiative data
+│ │ └── processed/ # Cleaned and processed ADNI datasets
+│ ├── PPMI/ # Parkinson's Progression Markers Initiative data
+│ │ └── processed/ # Cleaned and processed PPMI datasets
+│ └── README.md # Data documentation and descriptions
+│
+├── docs/ # Comprehensive project documentation
+│ ├── clinical_background/ # Clinical context and disease background
+│ ├── methods/ # Research methodologies and protocols
+│ ├── results/ # Experimental findings and visualizations
+│ └── README.md # Documentation overview
+│
+├── notebooks/ # Jupyter notebooks for exploration
+│ ├── exploratory/ # Exploratory data analysis (EDA)
+│ └── README.md # Notebooks guide
+│
+├── src/ # **Main**
+│ ├── data_processing/ # Data processing pipelines
+│ │ ├── ADNI/ # ADNI-specific processing scripts
+│ │ └── PPMI/ # PPMI-specific processing scripts
+│ ├── evaluation/ # Model evaluation and metrics
+│ └── modelling/ # Machine learning models
+│ ├── adni_csf_prediction.py # CSF biomarker prediction (ADNI)
+│ ├── adni_ad_diagnosis.py # Alzheimer's diagnosis models (ADNI)
+│ └── ppmi_regression.py # UPDRS III regression (PPMI)
+│
+├── .gitignore # Specifies untracked files
+├── Dockerfile # Container configuration
+├── Makefile # Automation commands
+├── README.md # Project overview (this file)
+└── requirements.txt # Python dependencies
