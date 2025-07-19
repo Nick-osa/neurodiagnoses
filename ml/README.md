@@ -33,39 +33,39 @@ This research initiative as part of a Master thesis with Fundació de Neuroscien
 
 ## Project Structure
 
-### Alternative Format Using Icons (More Visual)
-```markdown
-## 📁 Project Structure
+- **data/**
+  - ADNI/ - Alzheimer's data
+    - processed/ - Processed datasets
+  - PPMI/ - Parkinson's data
+    - processed/ - Processed datasets
+  - README.md - Data documentation
+  
+- **docs/**
+  - clinical_background/ - Clinical context
+  - methods/ - Research methodologies
+  - results/ - Experimental findings
+  - README.md - Documentation overview
 
-| Directory | Description |
-|-----------|-------------|
-| **📂 data/** | Datasets and processed data |
-| &nbsp;&nbsp;&nbsp;📂 ADNI/ | Alzheimer's Disease Neuroimaging Initiative data |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 processed/ | Cleaned and processed ADNI datasets |
-| &nbsp;&nbsp;&nbsp;📂 PPMI/ | Parkinson's Progression Markers Initiative data |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 processed/ | Cleaned and processed PPMI datasets |
-| &nbsp;&nbsp;&nbsp;📄 README.md | Data documentation |
-| **📂 docs/** | Project documentation |
-| &nbsp;&nbsp;&nbsp;📂 clinical_background/ | Clinical context |
-| &nbsp;&nbsp;&nbsp;📂 methods/ | Research methodologies |
-| &nbsp;&nbsp;&nbsp;📂 results/ | Experimental findings |
-| &nbsp;&nbsp;&nbsp;📄 README.md | Documentation overview |
-| **📂 notebooks/** | Jupyter notebooks |
-| &nbsp;&nbsp;&nbsp;📂 data_processing/ | Data transformation notebooks |
-| &nbsp;&nbsp;&nbsp;📂 demos/ | Demonstration notebooks |
-| &nbsp;&nbsp;&nbsp;📂 exploratory/ | Exploratory data analysis |
-| &nbsp;&nbsp;&nbsp;📄 README.md | Notebooks guide |
-| **📂 src/** | Production source code |
-| &nbsp;&nbsp;&nbsp;📂 data_processing/ | Data pipelines |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 ADNI/ | ADNI processing scripts |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 PPMI/ | PPMI processing scripts |
-| &nbsp;&nbsp;&nbsp;📂 evaluation/ | Model evaluation |
-| &nbsp;&nbsp;&nbsp;📂 modelling/ | ML models |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 adni_csf_prediction.py | CSF biomarker prediction |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 adni_ad_diagnosis.py | Alzheimer's diagnosis |
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📄 ppmi_regression.py | UPDRS III regression |
-| **📄 .gitignore** | Specifies untracked files |
-| **📄 Dockerfile** | Container configuration |
-| **📄 Makefile** | Automation commands |
-| **📄 README.md** | Project overview |
-| **📄 requirements.txt** | Python dependencies |
+- **notebooks/**
+  - data_processing/ - Transformation notebooks
+  - demos/ - Demonstration notebooks
+  - exploratory/ - EDA notebooks
+  - README.md - Notebooks guide
+
+- **src/**
+  - data_processing/ - Data pipelines
+    - ADNI/ - ADNI processing scripts
+    - PPMI/ - PPMI processing scripts
+  - evaluation/ - Model evaluation
+  - modelling/ - ML models
+    - adni_csf_prediction.py - CSF biomarker prediction
+    - adni_ad_diagnosis.py - Alzheimer's diagnosis
+    - ppmi_regression.py - UPDRS III regression
+
+- **Files**
+  - .gitignore - Untracked files
+  - Dockerfile - Container config
+  - Makefile - Automation
+  - README.md - Project overview
+  - requirements.txt - Dependencies
+
