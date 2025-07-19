@@ -68,4 +68,19 @@ This research initiative as part of a Master thesis with Fundació de Neuroscien
   - Makefile - Automation
   - README.md - Project overview
   - requirements.txt - Dependencies
+ 
+  ## Data Sources
+| Cohort | Description | Data Types | Access |
+|--------|-------------|------------|--------|
+| [ADNI](http://adni.loni.usc.edu/) | Alzheimer's Disease Neuroimaging Initiative | MRI, CSF biomarkers, Cognitive scores, Genetics | [Apply for access](http://adni.loni.usc.edu/data-samples/access-data/) |
+| [PPMI](https://www.ppmi-info.org/) | Parkinson's Progression Markers Initiative | DAT-SPECT, MRI, UPDRS scores, Genetics | [Apply for access](https://www.ppmi-info.org/access-data-specimens/download-data) |
 
+*Note: This repository contains only code and documentation. Actual patient data must be obtained through official channels.*
+
+## Key Findings
+Machine learning models trained on multimodal,non-invasive data can approximate CSF biomarker status and motor score symptom severity with clinically meaningful performance. Our tau positivity pipelines passed the minimum threshold AUC > 0.85 for application as a preliminary screening tool in clinical trial triage. In the PPMI pipelines, Integrating DAT-SPECT and genotypic features outperformed MRI only models and is close to clinical utility benchmark.
+
+Contact
+Nick Osaghae - nickosaghae@gmail.com
+
+Project Link: https://github.com/Nick-osa/neurodiagnoses/edit/production-ml
