@@ -83,4 +83,4 @@ Machine learning models trained on multimodal,non-invasive data can approximate 
 Contact
 Nick Osaghae - nickosaghae@gmail.com
 
-Project Link: https://github.com/Nick-osa/neurodiagnoses/edit/production-ml
+Project Link:https://github.com/Nick-osa/neurodiagnoses/tree/production-ml/ml
