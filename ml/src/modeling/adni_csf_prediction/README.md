@@ -149,7 +149,7 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 
 `[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+, pTau+, tTau+ / Atrophy (hippocampus↓), cognitive decline (ADAS13↑, LDELTOTAL↓)`
 
-# Directional Arrows (↑ / ↓)
+####  Directional Arrows (↑ / ↓)
 
 Directional arrows indicate the typical relationship of a feature to disease pathology:
 
