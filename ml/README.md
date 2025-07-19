@@ -18,6 +18,14 @@ This research initiative as part of a Master thesis with Fundació de Neuroscien
    - Genotypic data  
    *(PPMI cohort)*
 
+3. **AD prediction with shallow ANNs**
+   Exploring the masking by clinical data of other features predicting AD
+   - MRI imaging features
+   - Cognitive assessments
+   - Demographic data
+   - Genotypic markers  
+   *(ADNI cohort)*
+
 ## Key Features
 - Multi-modal data integration (imaging + clinical + genetic)
 - Biomarker ratio analysis for clinical trial triage
