@@ -132,17 +132,25 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 ---
 ### 🧠 3-Axis Diagnostic Mapping
 
-### 🧭 Three-Axis Diagnostic Mapping
+###  CSF Biomarker Positivity (Aβ42, tTau, pTau)
 
-| Axis | Category            | Key Features                                  |
-|------|---------------------|-----------------------------------------------|
-| 1    | Etiology / Risk     | APOE4 genotype, Age                           |
-| 2    | Molecular           | Aβ42 (predicted), SHAP-ranked biomarkers      |
-| 3    | Clinical–Anatomical | ↓Hippocampal volume, ↑Ventricular volume, ADAS13↑ |
+| **Axis**               | **Category**              | **Key Features Used**                                                             |
+|------------------------|---------------------------|------------------------------------------------------------------------------------|
+| **Axis 1: Etiology/Risk**     | Genetic Risk               | APOE4 genotype (0, 1, or 2 alleles)                                                 |
+|                        | Age Factor                | Age ↑                                                                              |
+| **Axis 2: Molecular**         | Core Biomarkers           | Aβ42, tTau, pTau (CSF-based, used as prediction targets)                           |
+|                        | SHAP-Identified Markers   | APOE4 × Age, APOE4 × Hippocampus, tTau/Aβ42 ratio, pTau/Aβ42 ratio                 |
+| **Axis 3: Clinical–Anatomical** | Cognitive Assessments      | ADAS13 ↑, MoCA ↓, LDELTOTAL ↓, TRABSCOR ↑, FAQ ↑                                  |
+|                        | Structural MRI            | Hippocampal volume ↓, Entorhinal volume ↓, Ventricular volume ↑                   |
+
+---
+
+### 🧾 Sample Annotation
+
+`[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+, pTau+, tTau+ / Atrophy (hippocampus↓), cognitive decline (ADAS13↑, LDELTOTAL↓)`
 
 
-📝 **Sample Annotation**  
-`[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+ / Cognitive decline: ADAS13↑`
+
 `
 
 
