@@ -11,15 +11,15 @@ This research initiative as part of a Master thesis with Fundació de Neuroscien
    - Genotypic markers  
    *(ADNI cohort)*
 
-2. **Motor Score Prediction (UPDRS III)**  
+2. **Motor Score Prediction (UPDRS III)**
    Forecasting Parkinson's disease progression(UPDRS III motor scores) using:
    - DAT-SPECT imaging
    - MRI features
    - Genotypic data  
    *(PPMI cohort)*
 
-3. **AD prediction with shallow ANNs**
-   Exploring the masking by clinical data of other features predicting AD
+4. **AD prediction with shallow ANNs**
+   Exploring the masking by clinical data of other features predicting AD:
    - MRI imaging features
    - Cognitive assessments
    - Demographic data
