@@ -132,19 +132,17 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 ---
 ### 🧠 3-Axis Diagnostic Mapping
 
-**Axis 1 (Etiology / Risk):**
-- APOE4 genotype
--
-- Age
+### 🧭 Three-Axis Diagnostic Mapping
 
-**Axis 2 (Molecular Biomarkers):**
-- pTau positivity
-- tTau/Abeta ratio
-- SHAP-important features: e.g., left entorhinal volume, amygdala, etc.
+| Axis | Category            | Key Features                                  |
+|------|---------------------|-----------------------------------------------|
+| 1    | Etiology / Risk     | APOE4 genotype, Age                           |
+| 2    | Molecular           | Aβ42 (predicted), SHAP-ranked biomarkers      |
+| 3    | Clinical–Anatomical | ↓Hippocampal volume, ↑Ventricular volume, ADAS13↑ |
 
-**Axis 3 (Clinical–Anatomical Features):**
-- Hippocampal volume (MRI)
-- MMSE 
-- Cortical thickness metrics
+
+📝 **Sample Annotation**  
+`[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+ / Cognitive decline: ADAS13↑`
+`
 
 
