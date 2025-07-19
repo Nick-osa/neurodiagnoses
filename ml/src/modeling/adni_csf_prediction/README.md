@@ -149,6 +149,18 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 
 `[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+, pTau+, tTau+ / Atrophy (hippocampus↓), cognitive decline (ADAS13↑, LDELTOTAL↓)`
 
+# Directional Arrows (↑ / ↓)
+
+Directional arrows indicate the typical relationship of a feature to disease pathology:
+
+- **↑ (Up arrow)**: The feature is **increased** or **elevated** in association with risk or pathology.  
+  _Example: `ADAS13 ↑` → Higher ADAS13 scores (worse cognition) are linked to Alzheimer's-related biomarker positivity._
+
+- **↓ (Down arrow)**: The feature is **decreased** or **reduced** in association with pathology.  
+  _Example: `Hippocampal volume ↓` → Lower hippocampal volume is commonly observed in Alzheimer's disease._
+
+This notation provides a compact and intuitive way to represent clinical and biomarker trends across diagnostic axes.
+
 
 
 `
