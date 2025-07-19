@@ -10,3 +10,9 @@ This directory contains processed datasets for the neurodiagnostic machine learn
 | **[PPMI](PPMI/)** | Parkinson's Progression Markers Initiative | [PPMI samples](PPMI/) | [Apply for access](https://www.ppmi-info.org/access-data-specimens/download-data) |
 
 ## Structure
+- **data/**
+  - ADNI/ - Alzheimer's data
+    - processed/ - Processed datasets
+  - PPMI/ - Parkinson's data
+    - processed/ - Processed datasets
+  - README.md - Data documentation
