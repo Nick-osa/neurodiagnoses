@@ -139,7 +139,7 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 | **Axis 1: Etiology/Risk**     | Genetic Risk               | APOE4 genotype (0, 1, or 2 alleles)                                                 |
 |                        | Age Factor                | Age ↑                                                                              |
 | **Axis 2: Molecular**         | Core Biomarkers           | Aβ42, tTau, pTau (CSF-based, used as prediction targets)                           |
-|                        | SHAP-Identified Markers   | APOE4 × Age, APOE4 × Hippocampus, tTau/Aβ42 ratio, pTau/Aβ42 ratio                 |
+|                         |
 | **Axis 3: Clinical–Anatomical** | Cognitive Assessments      | ADAS13 ↑, MoCA ↓, LDELTOTAL ↓, TRABSCOR ↑, FAQ ↑                                  |
 |                        | Structural MRI            | Hippocampal volume ↓, Entorhinal volume ↓, Ventricular volume ↑                   |
 
