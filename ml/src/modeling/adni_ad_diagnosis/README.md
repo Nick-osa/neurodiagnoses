@@ -129,4 +129,22 @@ This table summarizes the SHAP value directionality for MRI-derived features use
 
 *Interpretation based on SHAP summary plot from multimodal model trained on baseline MRI-derived features.*
 
+### 🧠 Three-Axis Diagnostic Mapping (ADNI – Alzheimer's Disease Diagnosis)
+
+| Axis | Category              | Key Elements                                                                 |
+|------|------------------------|------------------------------------------------------------------------------|
+| **1. Etiology/Risk**         | Genetic Risk            | APOE4 genotype                                                              |
+|                              | Age Factor              | Age ↑                                                                       |
+| **2. Molecular**             | –                       | -        |
+| **3. Clinical–Anatomical**   | MRI Atrophy             | ↓ Hippocampus_ICV, ↓ WholeBrain_ICV, ↓ MidTemp_ICV, ↓ Entorhinal_ICV        |
+|                              | Ventricular Expansion   | ↑ Ventricles_ICV                                                            |
+|                              | Clinical Scores         | ↑ CDRSB, ↓ MMSE                                                             |
+|                              | Composite Neurodegeneration | ↑ Dementia probability via SHAP contributions from above features       |
+
+---
+
+### 📝 Sample Annotation  
+`[July 2025] Genetic risk (APOE4+, Age↑) / – / Medial temporal atrophy (↓Hippocampus, ↓Entorhinal), cognitive impairment (↑CDRSB, ↓MMSE)`
+
+
 
