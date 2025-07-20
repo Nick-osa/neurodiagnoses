@@ -103,7 +103,7 @@ This project develops machine learning models to predict Unified Parkinson's Dis
 |------|------------------------|------------------------------------------------------------------------------|
 | **1. Etiology/Risk**         | Genetic Risk            | APOE4 genotype                                                              |
 |                              | Age Factor              | Age ↑                                                                       |
-| **2. Molecular**             | –                       | *Not directly applicable in this pipeline (no CSF/plasma molecular biomarkers)* |
+| **2. Molecular**             | –                       | - |
 | **3. Clinical–Anatomical**   | Dopaminergic Imaging    | Putamen_Total, Caudate_Total, Asym_Striatal_Score, Putamen_Entorhinal_Ratio |
 |                              | Asymmetry Metrics       | Putamen_Asym, Caudate_Asym                                                              |
 |                              | Structural MRI Volumes  | Hippocampus_Total_norm, Ventricular_Effect, lh_entorhinal, TotalGrayVol_norm |
