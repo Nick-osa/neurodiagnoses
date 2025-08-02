@@ -183,11 +183,11 @@ Cells are annotated with headings such as # Data Preparation, # Model Training, 
 
 Code cells are clearly annotated with section headers like:
 
-# Feature engineering and selection
+- Feature engineering and selection
 
-# Model Training
+- Model Training
 
-# SHAP Interpretation
+- SHAP Interpretation
 
 ## 📊How to Interpret the Outputs
 
