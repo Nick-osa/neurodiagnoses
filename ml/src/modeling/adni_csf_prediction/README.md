@@ -159,7 +159,7 @@ Directional arrows indicate the typical relationship of a feature to disease pat
   _Example: `Hippocampal volume ↓` → Lower hippocampal volume is commonly observed in Alzheimer's disease._
 
 This notation provides a compact and intuitive way to represent clinical and biomarker trends across diagnostic axes.
------
+
 
 -----
 ### How to Run This Notebook
