@@ -145,6 +145,66 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 
 ---
 
+### How to Run This Notebook
+
+## Environment Setup
+
+Open in Google Colab (recommended) or local Jupyter environment.
+
+Install required packages if prompted:
+Edit,copy
+!pip install shap optuna xgboost lightgbm scikit-learn pandas seaborn
+
+## Data Access
+
+Ensure you have access to the preprocessed ADNI dataset (e.g., cleaned_ADNI_baseline_data_sample.csv) from running the preprocessing ipynb.
+
+Upload or mount the dataset in the notebook’s runtime as instructed in the first code cell.
+
+## Execution
+
+Run each cell sequentially.
+
+Cells are annotated with headings such as # Data Preparation, # Model Training, and # SHAP Interpretation to guide you through each stage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 🧾 Sample Annotation
 
 `[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+, pTau+, tTau+ / Atrophy (hippocampus↓), cognitive decline (ADAS13↑, LDELTOTAL↓)`
