@@ -144,67 +144,6 @@ Modeling: scikit-learn, XGBoost, SHAP libraries
 |                        | Structural MRI            | Hippocampal volume ↓, Entorhinal volume ↓, Ventricular volume ↑                   |
 
 ---
-
-### How to Run This Notebook
-
-## Environment Setup
-
-Open in Google Colab (recommended) or local Jupyter environment.
-
-Install required packages if prompted:
-Edit,copy
-!pip install shap optuna xgboost lightgbm scikit-learn pandas seaborn
-
-## Data Access
-
-Ensure you have access to the preprocessed ADNI dataset (e.g., cleaned_ADNI_baseline_data_sample.csv) from running the preprocessing ipynb.
-
-Upload or mount the dataset in the notebook’s runtime as instructed in the first code cell.
-
-## Execution
-
-Run each cell sequentially.
-
-Cells are annotated with headings such as # Data Preparation, # Model Training, and # SHAP Interpretation to guide you through each stage.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 🧾 Sample Annotation
 
 `[July 2025] Genetic risk (APOE4+, age↑) / Aβ42+, pTau+, tTau+ / Atrophy (hippocampus↓), cognitive decline (ADAS13↑, LDELTOTAL↓)`
@@ -220,6 +159,64 @@ Directional arrows indicate the typical relationship of a feature to disease pat
   _Example: `Hippocampal volume ↓` → Lower hippocampal volume is commonly observed in Alzheimer's disease._
 
 This notation provides a compact and intuitive way to represent clinical and biomarker trends across diagnostic axes.
+-----
+
+-----
+### How to Run This Notebook
+
+All CSF positivity can be run the same way with the smae preprocessed dataset.
+
+#### Environment Setup
+
+- **Google Colab** (recommended for ease of use)
+- **Local Jupyter environment**
+
+#### Data Access
+
+Ensure you have access to the preprocessed ADNI dataset (e.g., cleaned_ADNI_baseline_data_sample.csv) from running the preprocessing ipynb.
+Upload the dataset manually in Colab.
+
+#### Execution
+
+Run each cell sequentially.
+Cells are annotated with headings such as # Data Preparation, # Model Training, and # SHAP Interpretation to guide you through each stage.
+
+Code cells are clearly annotated with section headers like:
+
+# Feature engineering and selection
+
+# Model Training
+
+# SHAP Interpretation
+
+## 📊How to Interpret the Outputs
+
+✅ Performance Metrics
+Classification Tasks (e.g., Aβ+, pTau+):
+
+Key metrics: AUC-ROC, precision, recall, F1-score
+
+Prioritize recall (1) and AUC for detecting true positives
+
+Regression Tasks (e.g., UPDRS prediction):
+
+Use R², MAE, RMSE to evaluate clinical severity predictions
+
+🔍 SHAP Plots Interpretation
+Beeswarm Plot:
+
+🔴 Red: Higher feature values
+
+🔵 Blue: Lower feature values
+
+➡ Rightward spread = greater contribution to positive classification or higher predicted severity
+
+Bar Plot:
+
+Displays feature importance ranking
+
+Higher average SHAP value = stronger impact on model prediction
+
 
 
 
